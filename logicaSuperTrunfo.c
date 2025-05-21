@@ -16,8 +16,7 @@ int main() {
     int pontos_turisticos, pontos_turisticos2;
     float densidade_populacional, pib_per_capita, densidade_populacional2, pib_per_capita2;
 
-    float densidade_populacional_1 = populacao / area;
-    float pib_per_capita_1 = pib  / populacao;
+    
 
     // Cadastro das Cartas:
 
@@ -39,8 +38,8 @@ int main() {
     printf("Qual número de pontos turísticos da cidade? : ");
     scanf("%d", &pontos_turisticos);
 
-    densidade_populacional_1 = (float)populacao / area;
-    pib_per_capita_1 = pib / populacao;
+    densidade_populacional = (float)populacao / area;
+    pib_per_capita = pib / populacao;
 
     printf("Qual o código da cidade2? : ");
     scanf("%s", codigo_da_cidade2);  
@@ -59,24 +58,47 @@ int main() {
 
     printf("Qual número de pontos turísticos da cidade2? : ");
     scanf("%d", &pontos_turisticos2);
+
+    densidade_populacional2 = (float)populacao2 / area2;
+    pib_per_capita2 = pib2 / populacao2;
     
 
     // Comparação de Cartas:
     // Desenvolva a lógica de comparação entre duas cartas.
 
     if (populacao > populacao2) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
+    printf("Cidade 1 tem maior população.\n");
+    } else {
+    printf("Cidade 2 tem maior população.\n");
+    }
+    if (area > area2) {
+    printf("Cidade 1 tem maior area.\n");
+    } 
+        else {
+    printf("Cidade 2 tem maior area.\n");
+    }
+    if (pib > pib2) {
+    printf("Cidade 1 tem maior pib.\n");
+    } else {
+    printf("Cidade 2 tem maior pib.\n");
+    }
+    if (pontos_turisticos > pontos_turisticos2) {
+    printf("Cidade 1 tem mais pontos turisticos.\n");
+    } else {
+    printf("Cidade 2 tem mais pontos turisticos.\n");
+    } 
 
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
+    if (densidade_populacional > densidade_populacional2) {
+    printf("Cidade 1 tem maior densidade populacional.\n");
+    } else {
+    printf("Cidade 2 tem maior densidade populacional.\n");
+    } 
+
+    if (pib_per_capita > pib_per_capita2) {
+    printf("Cidade 1 tem maior PIB per capta.\n");
+    } else {
+    printf("Cidade 2 tem maior PIB per capta.\n");
+    } 
 
     // Exibição dos Resultados:
     // Após realizar as comparações, exiba os resultados para o usuário.
